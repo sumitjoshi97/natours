@@ -1,0 +1,12 @@
+{
+  "name": "natours_landing_page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sumitjoshi97/natours.git",
+  "author": "sumitjoshi97 <sumitjoshi479@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "node-sass": "^4.8.3"
+  }
+}
