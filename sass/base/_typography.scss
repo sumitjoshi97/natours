@@ -47,3 +47,18 @@ body {
         text-shadow: .5rem 1rem 2rem rgba($color-black,0.2);
     }
 }
+
+.heading-tertiary {
+    font-size: $base-font;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $base-font;
+
+    &:not(:last-child) {
+        margin-bottom: 4rem;
+    }
+    
+}

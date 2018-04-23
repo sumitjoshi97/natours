@@ -80,11 +80,24 @@ body {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 4rem; }
+
 .u-center-text {
   text-align: center; }
 
-.u-margin-bottom-8 {
+.u-margin-bottom-large {
   margin-bottom: 8rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -92,6 +105,7 @@ body {
   padding: 15px 40px;
   border-radius: 100px;
   display: inline-block;
+  font-size: 1.6rem;
   transition: all 0.2s;
   position: relative; }
 
@@ -127,6 +141,22 @@ body {
   animation: moveInButton 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
 
+.btn-text:link, .btn-text:visited {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: 3px;
+  color: #55c57a;
+  font-size: 1.6rem;
+  transition: all 0.2s; }
+  .btn-text:link:hover, .btn-text:visited:hover {
+    background-color: #55c57a;
+    color: #fff;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px); }
+  .btn-text:link:active, .btn-text:visited:active {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.692), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
@@ -149,7 +179,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: #eee;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -158,7 +187,6 @@ body {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    background-color: red;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 2rem; }
