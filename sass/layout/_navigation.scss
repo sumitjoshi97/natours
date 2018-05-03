@@ -13,6 +13,7 @@
         z-index: 1000;
         box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
         cursor: pointer;
+        text-align: center;
     }
     &__background {
         height: 6rem;
@@ -23,7 +24,7 @@
         right: 6.5rem;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 500;
-        transition: transform 0.6s ease-in-out; // transform: scale(0);
+        transition: transform 0.6s cubic-bezier(.61,.07,.54,1.2); // transform: scale(0);
         // opacity: 0;
     }
     &__nav {
@@ -34,17 +35,14 @@
         right: 0;
         z-index: 800;
         opacity: 0;
-        transition: all 0.4s ease-in-out;
-        
+        transition: all 0.4s cubic-bezier(.56,-0.35,.49,1.42);
     }
     &__list {
-        position: absolute;
-        // width: 100%;
+        position: absolute; // width: 100%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         list-style: none;
-        
         &__item {
             margin: 1rem;
         }
@@ -78,9 +76,53 @@
         transform: scale(80);
     }
     &__checkbox:checked~&__nav {
-        display: block;
+        // display: block;
         width: 100%;
         opacity: 1;
-        
+    } // icon
+    &__icon {
+        position: relative;
+        top: 50%;
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+        }
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            transition: all 0.1s;
+        }
+        &::before {
+            top: -0.8rem;
+        }
+        &::after {
+            top: 0.8rem;
+        }
     }
+    // hover effect
+    &__btn:hover &__icon::before  {
+        top:-1rem;
+    }
+    &__btn:hover &__icon::after  {
+        top:1rem;
+    }
+
+    &__checkbox:checked + &__btn &__icon {
+        &::after {
+            top:0;
+            transform: rotate(135deg);
+        }
+        &::before {
+            top:0;
+            transform: rotate(225deg);
+        }
+
+        background-color: transparent;
+    } 
 }
