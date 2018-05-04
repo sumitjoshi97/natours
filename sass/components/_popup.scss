@@ -1,0 +1,35 @@
+.popup {
+height: 100vh;
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
+background-color: rgba($color-grey-dark-3,0.99);
+// display: inline-block;
+// height: 100%;
+// width: 100%;
+z-index: 4000;
+    &__content {
+        @include absCenter;
+        // position: fixed;
+        // top:50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        height: 50rem;
+        width: 70%;
+        background-color: $color-white;
+        box-shadow: 0 2rem 4rem rgba($color-black, 0.4);
+        border-radius: 3px;
+
+        // &__img {
+        //     // display: inline-block;
+        //     width: inherit;
+        //     & img {
+        //         display: block;
+        //         height: 25rem;
+        //         width: inherit;
+        //     }
+        // }
+
+    }
+}

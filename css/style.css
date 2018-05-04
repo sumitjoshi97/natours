@@ -463,6 +463,25 @@ body {
 .form__radio-input:checked ~ .form__radio-label .form__radio-btn::after {
   opacity: 1; }
 
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.99);
+  z-index: 4000; }
+  .popup__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50rem;
+    width: 70%;
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 3px; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.692), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
