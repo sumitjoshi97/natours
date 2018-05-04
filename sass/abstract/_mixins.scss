@@ -20,8 +20,29 @@
 // 1200- 1800px desktop - normal styles
 // 1800px + - big desktop sizes
 
-@mixin respond-phone {
-    @media (max-width: 600px) {
-        
+// @mixin respond-phone {
+//     @media (max-width: 600px) { @content };
+// }
+
+// breakpoint names
+// - phone
+// - tabPort
+// - tabLand
+// - bigdesk
+
+// 1em = 16px
+
+@mixin respond($breakpoint) {
+    @if($breakpoint == phone) {
+        @media (max-width: 37.5em) { @content }; //600px
+    }
+    @if($breakpoint == tabPort) {
+        @media (max-width: 56.5em) { @content }; //900px
+    }
+    @if($breakpoint == tabLand) {
+        @media (max-width: 75em) { @content }; //1200px
+    }
+    @if($breakpoint == bigDesk) {
+        @media (min-width: 112.5em) { @content }; //1800px
     }
 }

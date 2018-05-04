@@ -4,6 +4,7 @@
     &:not(:last-child) {
         margin-bottom: 5rem
     }
+    
     box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
     background-color: rgba($color-white,0.7);
     border-radius: 3px;
@@ -12,6 +13,7 @@
     font-size: $base-font;
     transform: skewX(-12deg);
     position: relative;
+
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -23,6 +25,7 @@
         transform: translateX(-3rem) skewX(12deg);
         z-index: 10;
     }
+
     &__caption {
         position: absolute;
         top: 50%;

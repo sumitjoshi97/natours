@@ -7,8 +7,29 @@
 }
 
 html {
+    //1rem = 10px
     font-size: 62.5%;
+
+    @include respond(bigDesk) {
+        font-size: 75%; //1rem= 12px
+    }
+
+    @include respond(tabLand) {
+        font-size: 56.25%; // 1rem = 9px
+    }
+
+    @include respond(tabPort) {
+        font-size: 50%; //1rem=8px
+    }
 }
+
 body {
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tabPort) {
+        padding: 0; //1rem=8px
+    }
+
+
 }
