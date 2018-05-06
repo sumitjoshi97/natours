@@ -1,44 +1,45 @@
-@mixin clearfix {
-    &::after {
-        content: '';
-        display: table;
-        clear: both;
+    @mixin clearfix {
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
     }
-}
 
-@mixin absCenter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-// media query manager
-// 0-600px Phone
-// 600 - 900px tablet portrait
-// 900 - 1200px tablet landscape
-// 1200- 1800px desktop - normal styles
-// 1800px + - big desktop sizes
-
-// @mixin respond-phone {
-//     @media (max-width: 600px) { @content };
-// }
-
-// breakpoint names
-// - phone
-// - tabPort
-// - tabLand
-// - bigdesk
-
-// 1em = 16px
-
-@mixin respond($breakpoint) {
-    @if($breakpoint == phone) {
-        @media (max-width: 37.5em) { @content }; //600px
+    @mixin absCenter {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-    @if($breakpoint == tabPort) {
-        @media (max-width: 56.5em) { @content }; //900px
-    }
+
+    
+    // media query manager
+    // 0-600px Phone
+    // 600 - 900px tablet portrait
+    // 900 - 1200px tablet landscape
+    // 1200- 1800px desktop - normal styles
+    // 1800px + - big desktop sizes
+
+    // @mixin respond-phone {
+    //     @media (max-width: 600px) { @content };
+    // }
+
+    // breakpoint names
+    // - phone
+    // - tabPort
+    // - tabLand
+    // - bigdesk
+
+    // 1em = 16px
+
+    @mixin respond($breakpoint) {
+        @if($breakpoint == phone) {
+            @media (max-width: 37.5em) { @content }; //600px
+        }
+        @if($breakpoint == tabPort) {
+            @media (max-width: 56.5em) { @content }; //900px
+        }
     @if($breakpoint == tabLand) {
         @media (max-width: 75em) { @content }; //1200px
     }
