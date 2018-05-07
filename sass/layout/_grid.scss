@@ -4,6 +4,7 @@
     @include respond(tabPort) {
         max-width: 50rem;
         padding: 0 5rem;
+       
     }
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;

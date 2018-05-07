@@ -4,19 +4,22 @@
     &:not(:last-child) {
         margin-bottom: 5rem
     }
-    
     box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
-    background-color: rgba($color-white,0.7);
+    background-color: rgba($color-white, 0.7);
     border-radius: 3px;
     padding: 6rem;
     padding-left: 9rem;
     font-size: $base-font;
     transform: skewX(-12deg);
-
     position: relative;
-
-    
-
+    @include respond (tabPort) {
+        padding: 4rem;
+        padding-left: 5rem;
+        width: 100%;
+    }
+    @include respond(phone) {
+        transform: skew(0deg)
+    }
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -27,8 +30,10 @@
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
         z-index: 10;
+        @include respond (phone) {
+            transform: translateX(-3rem) skew(0deg)
+        }
     }
-
     &__caption {
         position: absolute;
         top: 50%;
@@ -58,5 +63,8 @@
     }
     &__text {
         transform: skewX(12deg);
+        @include respond(phone) {
+            transform: skew(0deg)
+        }
     }
 }
