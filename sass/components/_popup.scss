@@ -32,6 +32,10 @@
             display: block;
             width: 100%;
         }
+
+        @include respond (tabLand) {
+            width: 0;
+        }
     }
     &__right {
         width: 66.666666%;
@@ -52,6 +56,11 @@
             -ms-hyphens: auto;
             -webkit-hyphens: auto;
             hyphens: auto;
+        }
+        @include respond (tabLand) {
+            width: 100%;
+            background-image: linear-gradient(to right, rgba($color-white, 0.7) 0, rgba($color-white, 0.7) 100%), url("../img/nat-8.jpg");
+            background-size: cover;
         }
     }
     &:target &__content {
