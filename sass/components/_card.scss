@@ -123,7 +123,8 @@
         font-size: 6rem;
         font-weight: 100
     }
-    @include respond(tabPort) {
+    @media only screen and (max-width: 56.5em),
+    only screen and (hover:none) {
         height: auto;
         border-radius: 3px;
         background-color: $color-white;
@@ -131,8 +132,7 @@
             // background-color: red;
             height: auto;
             position: relative;
-            box-shadow: none;
-             // background-color: $color-white;
+            box-shadow: none; // background-color: $color-white;
             &--back {
                 transform: rotateY(0deg);
                 -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
